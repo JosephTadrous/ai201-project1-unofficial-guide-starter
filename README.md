@@ -8,32 +8,27 @@
 ---
 
 ## Domain
+Student and College reviews of dorms at Ivy League Universities. It's useful because there is not a lot of dorms information available on universities websites. In addition, these pieces of information are usually general and do not reflect students experiences and testimonials.
 
-<!-- What topic or category of knowledge does your system cover?
-     Why is this knowledge valuable, and why is it hard to find through official channels?
-     Example: "Student reviews of CS professors at [university] — useful because official
-     course descriptions don't reflect teaching style, exam difficulty, or workload." -->
-
----
 
 ## Document Sources
-
 <!-- List every source you collected documents from.
      Be specific: include URLs, subreddit names, forum thread titles, or file names.
      Aim for variety — sources that together cover different subtopics or perspectives. -->
 
 | # | Source | Type | URL or file path |
 |---|--------|------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+| 1 | RateMyDorm — Harvard University | Review Aggregator | https://www.ratemydorm.com/dorms-ranked/harvard-university |
+| 2 | RateMyDorm — Yale University | Review Aggregator | https://www.ratemydorm.com/dorms-ranked/yale-university |
+| 3 | RateMyDorm — Princeton University | Review Aggregator | https://www.ratemydorm.com/dorms-ranked/princeton-university |
+| 4 | CollegeDormReviews — University of Pennsylvania | Review Aggregator | https://collegedormreviews.com/university-of-pennsylvania |
+| 5 | Niche — Best Dorms at Ivy League Universities | Ranking Site | https://www.niche.com/colleges/search/best-dorms/?type=national-universities&ranking=best-ivy-league-universities |
+| 6 | The Daily Pennsylvanian — "The do's and don'ts of living in a Penn dorm" | Student Newspaper | https://www.thedp.com/article/2016/06/new-student-issue-tips-dorm-living |
+| 7 | The Daily Pennsylvanian — "Upperclassmen offer advice on navigating housing" | Student Newspaper | https://www.thedp.com/article/2022/10/penn-upperclassmen-tips-advice-housing-process |
+| 8 | Columbia Spectator — Housing Guide 2023 | Student Newspaper | https://www.columbiaspectator.com/spectrum/2023/03/01/housing-guide/ |
+| 9 | r/harvard — Top posts tagged "best dorm" | Reddit / Forum | https://www.reddit.com/r/harvard/search/?q=best+dorm&sort=top |
+| 10 | r/yale — Top posts tagged "residential college dorm" | Reddit / Forum | https://www.reddit.com/r/yale/search/?q=residential+college+dorm&sort=top |
+
 
 ---
 
