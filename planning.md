@@ -21,16 +21,16 @@ Student and College reviews of dorms at Ivy League Universities. It's useful bec
 
 | # | Source | Type | URL or file path |
 |---|--------|------|-----------------|
-| 1 | RateMyDorm — Harvard University | Review Aggregator | https://www.ratemydorm.com/dorms-ranked/harvard-university |
-| 2 | RateMyDorm — Yale University | Review Aggregator | https://www.ratemydorm.com/dorms-ranked/yale-university |
-| 3 | RateMyDorm — Princeton University | Review Aggregator | https://www.ratemydorm.com/dorms-ranked/princeton-university |
-| 4 | CollegeDormReviews — University of Pennsylvania | Review Aggregator | https://collegedormreviews.com/university-of-pennsylvania |
-| 5 | Prked — An Insider's Guide to the Best Dorms at Cornell| Article | https://prked.com/post/insiders-guide-best-dorms-cornell |
+| 1 | RateMyDorm — Harvard University | Review Aggregator | https://www.ratemydorm.com/dorms/harvard-university |
+| 2 | RateMyDorm — Princeton University | Review Aggregator | https://www.ratemydorm.com/dorms/princeton-university|
+| 3 | RateMyDorm — Yale University | Review Aggregator | https://www.ratemydorm.com/dorms/yale |
+| 4 | Prked — An Insider's Guide to the Best Dorms at Cornell| Article | https://prked.com/post/insiders-guide-best-dorms-cornell |
+| 5 | Prked - A Yalie's Unofficial Guide to the Best Dorms at Yale University | Article | https://prked.com/post/a-yalies-unofficial-guide-to-the-best-dorms-at-yale-university |
 | 6 | The Daily Pennsylvanian — "The do's and don'ts of living in a Penn dorm" | Student Newspaper | https://www.thedp.com/article/2016/06/new-student-issue-tips-dorm-living |
 | 7 | The Daily Pennsylvanian — "Upperclassmen offer advice on navigating housing" | Student Newspaper | https://www.thedp.com/article/2022/10/penn-upperclassmen-tips-advice-housing-process |
-| 8 | Columbia Spectator — Housing Guide 2023 | Student Newspaper | https://www.columbiaspectator.com/spectrum/2023/03/01/housing-guide/ |
-| 9 | r/harvard — Top posts tagged "best dorm" | Reddit / Forum | https://www.reddit.com/r/harvard/search/?q=best+dorm&sort=top |
-| 10 | r/yale — Top posts tagged "residential college dorm" | Reddit / Forum | https://www.reddit.com/r/yale/search/?q=residential+college+dorm&sort=top |
+| 8 | Columbia Spectator — Housing Guide 2023 | Student Newspaper | https://www.columbiaspectator.com/spectrum/2026/03/09/the-ultimate-guide-to-first-year-housing/ |
+| 9 | A sense of camaraderie’: Exploring Dartmouth’s freshman residence halls | Student Newspaper| https://www.thedartmouth.com/article/2024/09/a-sense-of-camaraderie-exploring-dartmouths-freshman-residence-halls |
+| 10 | Decoding the Dorms: An Insider's Guide to the Best Places to Live at Brown University | Article | https://prked.com/post/decoding-the-dorms-an-insiders-guide-to-the-best-places-to-live-at-brown-university |
 
 ---
 
@@ -40,35 +40,32 @@ Student and College reviews of dorms at Ivy League Universities. It's useful bec
      State your chunk size (in tokens or characters), overlap size, and explain why those
      numbers fit the structure of your documents.
      A review-heavy corpus warrants different chunking than a long FAQ. -->
-This corpus is review-heavy and structurally mixed. Individual student reviews are naturally short and self-contained, while newspaper articles and Reddit threads are longer and need to be split. 
+This corpus is structurally mixed. Individual student reviews are naturally short and
+self-contained, while newspaper and long-form articles need to be split.
 
 **Chunk size:**
-- Review sites (RateMyDorm, CollegeDormReviews, Niche): 1 review or school entry = 1 chunk, 
-  naturally 80–350 tokens. No fixed size applied.
-- Newspaper articles (Daily Pennsylvanian, Columbia Spectator): 1,200 characters (~300 tokens), 
-  recursive on ["\n## ", "\n### ", "\n\n", "\n", ". ", " "]
-- Reddit (r/harvard, r/yale): 1,200 characters (~300 tokens), recursive on 
-  ["\n\n", "\n", ". ", " "], applied per comment not per page.
+- Review sites (RateMyDorm): 1 review per dorm = 1 chunk, naturally 80–350 tokens.
+  No fixed size applied. Dorms are separated by `---` and `## Dorm Name` headings.
+- Articles and newspapers (Prked, Daily Pennsylvanian, Columbia Spectator, The Dartmouth):
+  1,200 characters (~300 tokens), recursive on ["\n## ", "\n### ", "\n\n", "\n", ". ", " "].
+  Articles without headings (DP, Dartmouth) fall through to paragraph-level splits on "\n\n".
 
 **Overlap:**
 - Review sites: 0. Review boundaries are hard — no context bleeds across reviews.
-- Newspaper articles: 200 characters (~50 tokens). Articles have continuous prose where 
-  a sentence at a paragraph boundary often sets up the next paragraph's point.
-- Reddit comments: 200 characters (~50 tokens), applied only when a comment exceeds 
-  350 tokens and must be split. Most comments won't hit this path.
+- Articles and newspapers: 200 characters (~50 tokens). Articles have continuous prose
+  where a sentence at a paragraph boundary often sets up the next paragraph's point.
 
 **Reasoning:**
-This corpus has three structurally distinct source types, so a single chunk size would 
-either over-split short reviews or under-split long articles. Review sites are parsed 
-structurally (HTML extraction), not split by algorithm. Newspaper articles use recursive chunking because 
-their reliable paragraph and heading conventions give the separator hierarchy clean 
-boundaries to exploit; 300 tokens is large enough to capture a complete journalistic 
-point without merging unrelated 
-sections. Reddit sits in between — comments are the primary unit, recursive chunking 
-only activates for outlier wall-of-text comments, and the 50-token overlap preserves 
-continuity across the mid-comment split. Overlap is zero for reviews because 
-redundancy across chunk boundaries adds index noise without retrieval benefit when 
-boundaries are already semantically clean.
+This corpus has two structurally distinct source types, so a single chunk size would
+either over-split short reviews or under-split long articles. Review sites are parsed
+structurally (by `---` and `## heading` boundaries), not split by algorithm. Articles
+and newspapers use recursive chunking because their heading and paragraph conventions
+give the separator hierarchy clean boundaries to exploit; 300 tokens is large enough
+to capture a complete point without merging unrelated sections. The Spectator article
+has short bullet-point paragraphs (~107 chars avg) which naturally group multiple
+pros/cons bullets for the same dorm into a single chunk. Overlap is zero for reviews
+because redundancy across chunk boundaries adds index noise without retrieval benefit
+when boundaries are already semantically clean.
 
 ---
 
@@ -143,7 +140,7 @@ Four tradeoffs would drive model selection in production:
      Label each stage with the tool or library you're using.
      You can use ASCII art, a Mermaid diagram, or embed a sketch as an image.
      You'll use this diagram as context when prompting AI tools to implement each stage. -->
-     ![Architecture](architecture.png)
+     ![Architecture](./architecture.png)
 ---
 
 ## AI Tool Plan
