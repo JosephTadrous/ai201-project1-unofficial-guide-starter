@@ -142,6 +142,39 @@ def _looks_like_dorm_name(line: str, prior_lines: list[str]) -> bool:
     return True
 
 
+def _promote_subheadings(text: str) -> str:
+    """Detect short standalone lines (dorm names, area names) and promote to #### headings.
+
+    A sub-heading is a short line (< 60 chars) between blank lines that doesn't
+    end with sentence punctuation and isn't already a heading or list item.
+    """
+    lines = text.split("\n")
+    result = []
+    for i, line in enumerate(lines):
+        stripped = line.strip()
+        prev_blank = (i == 0) or (not lines[i - 1].strip())
+        next_blank = (i + 1 >= len(lines)) or (not lines[i + 1].strip())
+
+        if (
+            stripped
+            and prev_blank
+            and next_blank
+            and len(stripped) < 60
+            and not stripped.startswith("#")
+            and not stripped.startswith("-")
+            and not stripped.startswith(">")
+            and not stripped.endswith(".")
+            and not stripped.endswith("!")
+            and not stripped.endswith("?")
+            and not stripped.endswith(",")
+            and not stripped.endswith(":")
+        ):
+            result.append(f"#### {stripped}")
+        else:
+            result.append(line)
+    return "\n".join(result)
+
+
 def parse_prked_html(raw: str, meta: dict) -> str:
     """
     Prked articles use a standard <article> tag with h1/h2/h3/p elements.
@@ -180,7 +213,8 @@ def parse_prked_html(raw: str, meta: dict) -> str:
         else:
             output.append(f"{text}\n")
 
-    return _collapse_blank_lines("\n".join(output))
+    result = _collapse_blank_lines("\n".join(output))
+    return _promote_subheadings(result)
 
 
 def parse_thedp_html(raw: str, meta: dict) -> str:

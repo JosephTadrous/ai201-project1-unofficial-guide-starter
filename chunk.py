@@ -27,7 +27,7 @@ _CLEAN_TO_RAW = {Path(raw).stem + ".md": raw for raw in SOURCE_META}
 
 CHUNK_SIZE = 1200  # characters
 OVERLAP = 200      # characters
-SEPARATORS = ["\n## ", "\n### ", "\n\n", "\n", ". ", " "]
+SEPARATORS = ["\n## ", "\n### ", "\n#### ", "\n\n", "\n", ". ", " "]
 
 
 # ── Review chunking ─────────────────────────────────────────────────
@@ -122,7 +122,8 @@ def _recursive_split(text: str, separators: list[str], chunk_size: int) -> list[
 
 
 def _merge_pieces(pieces: list[str], chunk_size: int) -> list[str]:
-    """Merge small adjacent pieces into chunks up to chunk_size."""
+    """Merge small adjacent pieces into chunks up to chunk_size.
+    Never merge across heading boundaries (lines starting with #)."""
     if not pieces:
         return []
 
@@ -130,7 +131,9 @@ def _merge_pieces(pieces: list[str], chunk_size: int) -> list[str]:
     current = pieces[0]
 
     for piece in pieces[1:]:
-        if len(current) + len(piece) <= chunk_size:
+        # Don't merge if the next piece starts with a heading
+        starts_with_heading = piece.lstrip().startswith("#")
+        if not starts_with_heading and len(current) + len(piece) <= chunk_size:
             current += piece
         else:
             merged.append(current.strip())

@@ -8,17 +8,17 @@ I've been around the block, seen the good, the bad, & the downright quirky when 
 
 First things first, you need to understand how Cornell organizes its student housing. It's not just a free-for-all. There's a method to the madness, & it's designed to shape your experience from your first day on campus.
 
-North Campus: The Freshman Bubble
+#### North Campus: The Freshman Bubble
 
 For your first year, you'll be living on North Campus. This is a deliberate choice by the university to create a sense of community among all the new students. Honestly, it's a pretty great system. You're all in the same boat, figuring out the bus schedule, complaining about the walk to Central Campus, & discovering the joys of late-night food from Louie's Lunch. North Campus has its own dining halls, community centers, gyms, & even a convenience store. It's like a little self-contained village for first-years.
 
 The downside? It's a bit of a hike from your classes on Central Campus, especially in the snow. But hey, it builds character, right? Plus, the TCAT bus system is your best friend.
 
-West Campus: The Upperclassman Haven
+#### West Campus: The Upperclassman Haven
 
 Once you're a sophomore, the world opens up a bit. Many sophomores, juniors, & seniors opt to live on West Campus. This area is organized into a "House System," which is kind of like a toned-down version of Harry Potter houses. There are five residential houses, each with its own dining hall, faculty-in-residence, & unique community feel. West Campus is known for being beautiful, with its iconic Gothic architecture & proximity to the slope (perfect for a quick sled ride in the winter). It's also much closer to academic buildings, which is a big plus.
 
-Collegetown & South Campus: The Off-Campus Vibe
+#### Collegetown & South Campus: The Off-Campus Vibe
 
 As you get older, you might choose to move off-campus into Collegetown or other nearby neighborhoods. This is where you'll find a mix of university-owned apartments & private rentals. Collegetown is bustling with restaurants, shops, & a lively social scene. It's a popular choice for juniors & seniors who want a bit more independence.
 
@@ -32,15 +32,15 @@ Okay, let's be real, this is what you're here for. You want to know which dorms 
 
 These are the dorms that everyone wants. They're newer, have great amenities, & generally a good social scene.
 
-Toni Morrison Hall
+#### Toni Morrison Hall
 
 If you hit the housing lottery & get Toni Morrison Hall, you've basically won the grand prize. Opened in 2022, this place is the pinnacle of modern dorm living at Cornell. It's got air conditioning (a lifesaver in the early fall), suite-style rooms with shared bathrooms, & tons of common areas designed to get you out of your room & interacting with people. There are lounges, kitchens, & even music practice rooms. The whole vibe is very sleek & contemporary. It's also right next to a dining hall, which is a MAJOR plus.
 
-Ganędagǫ: Hall
+#### Ganędagǫ: Hall
 
 Right up there with Toni Morrison Hall is Ganędagǫ: Hall (pronounced Gah-NEH-dah-go). This is another one of the brand-new dorms on North Campus, & it shares a lot of the same amazing features: air conditioning, suite-style living, & a modern aesthetic. It's named in the language of the Cayuga Nation, which is a really cool nod to the history of the land Cornell is built on. Like its neighbor, it's designed to foster community, with plenty of common spaces for studying & hanging out.
 
-Mews Hall & Court-Kay-Bauer Hall (CKB)
+#### Mews Hall & Court-Kay-Bauer Hall (CKB)
 
 Before the new dorms came along, Mews & CKB were the undisputed kings of North Campus. And honestly, they're still top-tier choices. Both were built in the early 2000s, so they're relatively modern & have air conditioning.
 
@@ -52,11 +52,11 @@ Court-Kay-Bauer, or CKB as everyone calls it, is famous for its unique layout. I
 
 These dorms might not have all the bells & whistles of the new builds, but they're still great places to live. They're the bread & butter of the freshman experience for many Cornellians.
 
-Clara Dickson Hall
+#### Clara Dickson Hall
 
 Dickson is a bit of a legend on North Campus. It's the largest dorm in the Ivy League, housing almost 500 students. Because of its size, it can feel a bit overwhelming at first, but it also means there's always someone new to meet. Dickson is known for having a lot of single rooms, which is a rare find for freshmen. The downside? It's an older building, so no AC, & the bathrooms can be a bit...well, let's just say they have character. Still, it's a quintessential Cornell experience.
 
-Mary Donlon Hall
+#### Mary Donlon Hall
 
 If Dickson is the sprawling giant, Donlon is the social butterfly. It has a unique "thong-shaped" layout (yes, really) that encourages social interaction. The rooms are mostly doubles, & the wings of the building all lead to a central lounge area. This makes it a really easy place to make friends, & it has a reputation for being one of the most social dorms on campus. If you're looking for a quiet, studious environment, Donlon might not be your top choice. But if you want to be in the heart of the action, it's a great spot.
 
@@ -64,11 +64,11 @@ If Dickson is the sprawling giant, Donlon is the social butterfly. It has a uniq
 
 These are the dorms that often get a bad rap, but honestly, they're not as bad as people make them out to be. They're older, for sure, but they have their own charm.
 
-The High Rises (Jameson Hall & High Rise 5)
+#### The High Rises (Jameson Hall & High Rise 5)
 
 The High Rises are exactly what they sound like: two tall towers that are a prominent feature of the North Campus skyline. They're definitely on the older side, & the rooms can be a bit small. But they're arranged in suites, which is a nice way to have a built-in group of friends. The views from the upper floors are also pretty incredible. The community in the High Rises is known for being tight-knit, & many students who live there end up loving it.
 
-The Low Rises (Low Rise 6 & 7)
+#### The Low Rises (Low Rise 6 & 7)
 
 The Low Rises are another set of older dorms, known for their unique, maze-like layout. They were supposedly designed to limit social gatherings back in the day, but students have found ways to make them social nonetheless. The rooms are a mix of singles & doubles, & like the High Rises, they're suite-style. They're a bit further from Central Campus, but they have a certain quirky charm that many students appreciate.
 
