@@ -93,7 +93,7 @@ k=5 by default. Nudged to k=7 for detected cross-school comparison queries (e.g.
 "which Ivy has the best freshman dorms?").
 
 **Production tradeoff reflection:**
-Four tradeoffs would drive model selection in production:
+Two tradeoffs would drive model selection in production:
 
 - Context length: all-MiniLM-L6-v2 truncates at 256 tokens, silently cutting longer
   article chunks. text-embedding-3-large (8,191 tokens) or instructor-xl (512 tokens)
@@ -114,10 +114,10 @@ Four tradeoffs would drive model selection in production:
 | # | Question | Expected answer |
 |---|----------|-----------------|
 | 1 | How far is Thayer dorm from other on-campus buildings at Harvard? | Thayer dorm has easy access to the dining hall (2 min walk) or to most general lectures in the science center (3 min walk). Source: https://www.ratemydorm.com/reviews/harvard-university/harvard-university-thayer |
-| 2 |  What do Penn students say about room sizing when moving into a dorm?  | Don't overestimate room size — measure before bringing furniture. At least one student arrived with furniture that did not fit at all.  Source: https://www.thedp.com/article/2016/06/new-student-issue-tips-dorm-living  |
-| 3 | Does any of the dorms at Columbia have esport lounges? | Accoring to the Columbia Spectator, There’s an esports game lounge downstairs at Wallach Hall | Source: https://www.columbiaspectator.com/spectrum/2026/03/09/the-ultimate-guide-to-first-year-housing/ |
-| 4 | Which freshman dorms have AC at Cornell? | Based on the article, the freshman dorms at Cornell with AC are: Toni Morrison Hall — opened 2022, explicitly listed as having AC. Ganędagǫ: Hall — also brand new, shares the same features including AC. Mews Hall — built early 2000s, has AC. Court-Kay-Bauer Hall (CKB) — built early 2000s, has AC. Source: https://prked.com/post/insiders-guide-best-dorms-cornell|
-| 5 | How is Forbes College Main dorms at Princeton? | Forbes College at Princeton is split into two distinct sections — the newer wing offers large rooms with walk-in closets, natural light, better heating, and more privacy, but lacks AC and has occasional roaches, while the main inn has smaller, sometimes dungeon-like rooms that are more centrally located near the dining hall and communal areas. Specific rooms stand out: room 220 is considered the best in Forbes, room 216 has great sunset views and private bathroom, and room 268 is worth avoiding due to plumbing leaks from the men's bathroom above it. Overall, Forbes presents a clear choice between space and isolation in the new wing versus convenience and community in the main inn, with heating described as efficient and hallway bathrooms in the new wing kept consistently clean. Source: https://www.ratemydorm.com/reviews/princeton-university/princeton-university-forbes|
+| 2 |  Which dorms at Brown are close to the fitness center? | Pembroke Campus and Metcalf & Miller Halls are close to the fitness center Source: https://prked.com/post/decoding-the-dorms-an-insiders-guide-to-the-best-places-to-live-at-brown-university |
+| 3 | Does any of the dorms at Columbia have esports lounges? | John Jay and Wallach Hall have a shared esports game lounge downstairs | Source: https://www.columbiaspectator.com/spectrum/2026/03/09/the-ultimate-guide-to-first-year-housing/ |
+| 4 | Which freshman dorms at Cornell have AC? | Based on the article, the freshman dorms at Cornell with AC are: Toni Morrison Hall — opened 2022, explicitly listed as having AC. Ganędagǫ: Hall — also brand new, shares the same features including AC. Mews Hall — built early 2000s, has AC. Court-Kay-Bauer Hall (CKB) — built early 2000s, has AC. Source: https://prked.com/post/insiders-guide-best-dorms-cornell|
+| 5 | How is Forbes College Main dorms? | Forbes College at Princeton is split into two distinct sections — the newer wing offers large rooms with walk-in closets, natural light, better heating, and more privacy, but lacks AC and has occasional roaches, while the main inn has smaller, sometimes dungeon-like rooms that are more centrally located near the dining hall and communal areas. Specific rooms stand out: room 220 is considered the best in Forbes, room 216 has great sunset views and private bathroom, and room 268 is worth avoiding due to plumbing leaks from the men's bathroom above it. Overall, Forbes presents a clear choice between space and isolation in the new wing versus convenience and community in the main inn, with heating described as efficient and hallway bathrooms in the new wing kept consistently clean. Source: https://www.ratemydorm.com/reviews/princeton-university/princeton-university-forbes|
 
 ---
 
