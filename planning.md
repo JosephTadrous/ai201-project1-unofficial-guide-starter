@@ -140,7 +140,7 @@ Two tradeoffs would drive model selection in production:
      Label each stage with the tool or library you're using.
      You can use ASCII art, a Mermaid diagram, or embed a sketch as an image.
      You'll use this diagram as context when prompting AI tools to implement each stage. -->
-     ![Architecture](./architecture.png)
+     ![Architecture](architecture.png)
 ---
 
 ## AI Tool Plan
